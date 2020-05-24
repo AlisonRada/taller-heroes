@@ -1,0 +1,13 @@
+<h1>Su búsqueda sobre <strong>{{busqueda}}</strong></h1>
+<hr>
+<div class="row animated fadeIn fast" *ngIf="hero.length == 0 && villain.length == 0">
+    <div class="col-md-12">
+        <div class="alert alert-primary">
+            No existe resultados para su busqueda {{busqueda}}
+        </div>
+    </div>
+</div>
+<div class="card-columns">
+    <app-hero-card [type]="'heroe'" [heros]="heros" [index]="heros.id" *ngFor="let heros of hero"></app-hero-card>
+    <app-hero-card [type]="'villain'" [heros]="heros" [index]="heros.id" *ngFor="let heros of villain"></app-hero-card>
+</div>

@@ -1,0 +1,5 @@
+<h1>{{title}} <small>Marvel and DC </small></h1>
+<hr>
+<div class="card-columns">
+    <app-hero-card [type]="type" [heros]="heros" [index]="heros.id" *ngFor="let heros of hero"></app-hero-card>
+</div>
